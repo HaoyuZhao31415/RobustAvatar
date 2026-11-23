@@ -13,3 +13,32 @@
 @media(max-width:1000px){.hero h1{font-size:43px}.control-label{display:block;margin:0 0 8px}.explorer-toolbar{align-items:end}.result-grid{gap:12px}}
 @media(max-width:650px){body{font-size:15px}.wrap,.prose{width:calc(100% - 36px)}.hero{padding-top:32px}.hero h1{font-size:31px;line-height:1.17;letter-spacing:-.5px}.venue{font-size:18px;margin-top:20px}.authors{font-size:18px;margin-top:12px}.resource-links{margin:18px 0 28px;gap:5px}.button{font-size:14px;padding:6px 13px;gap:6px;min-height:37px}.button svg{width:15px;height:15px}.soon{font-size:10px}.teaser-caption{font-size:17px;line-height:1.5;margin-top:18px;text-align:left}.section,.results-section,.abstract-section .section{padding-block:34px}h2{font-size:27px;line-height:1.2;margin-bottom:20px}.section-heading>p,.method-description,.abstract-section p{text-align:left;line-height:1.7}.explorer-toolbar{gap:16px;margin:22px 0}.control-label{font-size:12px}.segmented button{padding:7px 11px;font-size:12px;min-height:36px}.subject-label{display:block;font-size:12px}.subject-label select{display:block;margin-top:8px;font-size:12px;min-height:38px;padding:7px 20px 7px 8px}.result-grid{gap:8px}.result-grid figcaption{font-size:12px;line-height:1.5;margin-bottom:6px}.result-grid figcaption span:last-child{font-size:10px}.result-grid .image-button{min-height:60px}.figure-note{font-size:12px;margin-top:17px}.comparison-toolbar{gap:15px;margin:20px 0}.comparison-toolbar label{font-size:12px;gap:7px}.comparison-toolbar select{font-size:12px;padding:7px 20px 7px 8px}.comparison-toolbar .segmented button{padding:7px 9px;font-size:11px}.chart-panel{padding:10px 0}.chart-toolbar{gap:8px}.chart-toolbar h3{font-size:13px}.segmented.small button{font-size:11px;padding:5px 12px}#chart-subtitle{font-size:11px}.chart-legend{font-size:10px;gap:9px 15px}table{font-size:11px}.data-details summary{font-size:13px}.citation-heading h2{font-size:27px}.citation-section pre{font-size:11px;padding:18px 14px}.citation-note{font-size:12px}.copy-button{font-size:12px}.site-footer{font-size:12px;padding:30px 18px}.method-figure{margin-bottom:18px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+
+
+/* Language controls and readable Chinese typography. */
+.site-header{display:flex;justify-content:flex-end;padding-top:20px}
+.language-switch{display:inline-flex;align-items:center;gap:3px;padding:3px;border:1px solid #ddd;border-radius:999px;background:#fafafa}
+.language-switch[hidden]{display:none}
+.language-switch button{border:0;border-radius:999px;background:transparent;color:#555;padding:7px 16px;min-height:40px;min-width:72px;font-size:14px;line-height:1.4}
+.language-switch button[aria-pressed=true]{background:#363636;color:#fff}
+.language-switch button:hover:not([aria-pressed=true]){background:#eee}
+.site-header + main .hero{padding-top:28px}
+html:lang(zh-CN) body{font-family:'Noto Sans','PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif;line-height:1.8}
+html:lang(zh-CN) .hero h1,html:lang(zh-CN) .venue,html:lang(zh-CN) .teaser-caption{font-family:'Google Sans','PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif}
+html:lang(zh-CN) .hero h1{font-size:44px;line-height:1.4;letter-spacing:0}
+html:lang(zh-CN) h2{line-height:1.45}
+html:lang(zh-CN) .teaser-caption,html:lang(zh-CN) .abstract-section p,html:lang(zh-CN) .method-description,html:lang(zh-CN) .section-heading>p{line-height:1.85;text-align:left}
+html:lang(zh-CN) .teaser-caption{text-align:center}
+html:lang(zh-CN) .chart-toolbar h3{line-height:1.6}
+.explorer-toolbar,.comparison-toolbar{flex-wrap:wrap}
+@media(max-width:650px){
+  .site-header{padding-top:14px}
+  .language-switch button{padding:6px 13px;min-height:40px}
+  .site-header + main .hero{padding-top:24px}
+  html:lang(zh-CN) body{font-size:16px}
+  html:lang(zh-CN) .hero h1{font-size:clamp(21px,6.2vw,25px);line-height:1.55}
+  html:lang(zh-CN) h2{font-size:25px}
+  html:lang(zh-CN) .teaser-caption{text-align:left}
+  html:lang(zh-CN) .result-grid figcaption span:last-child{font-size:11px}
+  .chart-toolbar{flex-wrap:wrap}
+}
